@@ -13,11 +13,8 @@ const initialState = {}
 const CartContext = React.createContext()
 
 export const CartProvider = ({ children }) => {
-  return (
-    <CartContext.Provider value='cart context'>{children}</CartContext.Provider>
-  )
+  return <CartContext.Provider value='cart context' children={children} />
 }
+
 // make sure use
-export const useCartContext = () => {
-  return useContext(CartContext)
-}
+export const useCartContext = () => useContext(CartContext)

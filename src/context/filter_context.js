@@ -17,11 +17,7 @@ const initialState = {}
 const FilterContext = React.createContext()
 
 export const FilterProvider = ({ children }) => {
-  return (
-    <FilterContext.Provider value='filter context'>
-      {children}
-    </FilterContext.Provider>
-  )
+  return <FilterContext.Provider value='filter context' children={children} />
 }
 // make sure use
 export const useFilterContext = () => {

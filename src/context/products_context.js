@@ -19,9 +19,7 @@ const ProductsContext = React.createContext()
 
 export const ProductsProvider = ({ children }) => {
   return (
-    <ProductsContext.Provider value='products context'>
-      {children}
-    </ProductsContext.Provider>
+    <ProductsContext.Provider value='products context' children={children} />
   )
 }
 // make sure use
